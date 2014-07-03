@@ -1,2 +1,4 @@
-summerblue
+SummerBlue
 ==========
+
+Basekit Standard Template
