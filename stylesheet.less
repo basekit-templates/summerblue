@@ -115,7 +115,7 @@ body {
 
 .header-profile {
 	background-color: @color-swatch2;
-	padding-top: 70px;
+	padding-top: 95px;
 	padding-bottom: 40px;
 	width: 100%;
 	display: inline-block;
@@ -190,14 +190,14 @@ body {
 		}
 		.widget.clicktocall a {
 			cursor: text;
-            background-image: image('/images/icon-phone-grey.svg');
+            background-image: image('/images/icon-phone-grey.png');
             background-repeat: no-repeat;
             background-position: left center;
             padding-left: 20px;
 			@media @mobile {
 				cursor: pointer;
                 background-image: none;
-                background-image: image('/images/icon-phone-white.svg');
+                background-image: image('/images/icon-phone-white.png');
                 background-repeat: no-repeat;
                 background-position: 10px center;
                 background-size: 20px;
@@ -205,6 +205,20 @@ body {
 			}
 		}
 	}
+}
+
+
+/* SVG Icons */
+
+.svg {
+    .header-profile .header-prof-right .widget.clicktocall a {
+        background-image: image('/images/icon-phone-grey.svg');
+        background-size: contain;
+        @media @mobile {
+            background-image: image('/images/icon-phone-white.svg');
+            background-size: 20px;
+        }
+    }
 }
 
 
