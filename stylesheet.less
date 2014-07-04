@@ -88,6 +88,13 @@ body {
 	}
 }
 
+.bk-header .contain {
+    @media only screen and (max-width: 480px) {
+        max-width: 68%;
+        float: left;
+    }
+}
+
 .widget {
 	&.logo, &.companyname {
 		display: inline-block;
@@ -111,13 +118,17 @@ body {
             max-width: 75%;
         }
         @media only screen and (max-width: 480px) {
-            max-width: 55%;
+            max-width: 100%;
         }
 		a {
 			@media only screen and (max-width: 568px) {
 				font-size: bkscale(@font-swatch10-font-size,0.8);
                 line-height: bkscale(@font-swatch10-font-size,0.85);
 			}
+            @media @mobile {
+                font-size: bkscale(@font-swatch10-font-size,0.8);
+                line-height: bkscale(@font-swatch10-font-size,0.85);
+            }
 		}
 	}
 }
