@@ -459,17 +459,20 @@ body.menu-active .bk-nav {
    =============================== */
 
 
-.bk-header, .bk-footer {
-    .widget.profile {
-        margin: 0 0 1em;
-        form fieldset input { 
-            background-color: @color-swatch1;
-            border: 1px solid darken(@color-swatch2,2%);
+
+.widget.profile form {
+    margin: 0 0 1em;
+    fieldset input { 
+        background-color: @color-swatch1;
+        border: 1px solid darken(@color-swatch2,2%);
+        @media @mobile {
+            width: 100%;
         }
     }
-}   
+}
 
-.contactform input, .widget.signupform form fieldset input, .widget.profile form fieldset input {
+
+.contactform input, .widget.signupform form fieldset input {
     background-color: @color-swatch2;
     border: 1px solid darken(@color-swatch2,2%);
     margin-bottom: 20px;
@@ -857,6 +860,11 @@ hr {
                 border-top: 1px dotted fade(@color-swatch7,25%);
                 border-bottom: 1px dotted fade(@color-swatch7,25%);
             }
+            .menu-header {
+                @media only screen and (max-width: 550px) {
+                    border-top: none;
+                }
+            }
             .menu-items {
                 .menu-item {
                     width: 100%;
@@ -1004,6 +1012,18 @@ hr {
 
 .blog-post-sharing {
     margin: 1.8em 0;
+    button {
+        margin-right: 5px;
+        &.btn.facebook {
+            background-color: #3b5998;
+        }
+        &.btn.twitter {
+            background-color: #4099FF;
+        }
+        &.btn.googleplus {
+            background-color: #d34836;
+        }
+    }
 }
 
 /* ===============================
