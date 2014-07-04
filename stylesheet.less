@@ -83,7 +83,7 @@ body {
 	width: 100%;
 	z-index: 9999;
 	@media @mobile {
-		padding: 20px 0;
+		padding: 7px 0;
 	}
 }
 
@@ -99,7 +99,7 @@ body {
 			vertical-align: top;
 		}
         @media @mobile {
-            padding-top: 8px;
+            padding-top: 2px;
         }
 	}
 	&.companyname {
@@ -107,7 +107,8 @@ body {
         max-width: 60%;
 		a {
 			@media @mobile {
-				font-size: bkscale(@font-swatch10-font-size, 0.96);
+				font-size: bkscale(@font-swatch10-font-size, 0.8);
+                line-height: bkscale(@font-swatch10-font-size, 0.85);
 			}
 		}
 	}
@@ -115,7 +116,7 @@ body {
 
 .header-profile {
 	background-color: @color-swatch2;
-	padding-top: 95px;
+	padding-top: 70px;
 	padding-bottom: 40px;
 	width: 100%;
 	display: inline-block;
