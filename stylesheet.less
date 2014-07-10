@@ -57,6 +57,7 @@ body {
 #main {
 	padding-top: 100px;
     position: fixed;
+    left: 0;
     top: 0;
     right: 0;
     width: 100%;
@@ -78,10 +79,11 @@ body {
 	border-top: 15px solid @color-swatch7;
 	padding: 20px 0;
 	position: fixed;
+    left: 0;
 	right: 0;
 	top: 0;
 	width: 100%;
-	z-index: 9999;
+	z-index: 1;
 	@media only screen and (max-width: 568px) {
 		padding: 7px 0;
         min-height: 100px;
@@ -273,6 +275,7 @@ body {
 }
 
 .widget.extendednavigation {
+    z-index: 9999;
 	background: @color-swatch7;
 	display: table;
 	padding: 30px 15px;
