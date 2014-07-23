@@ -186,6 +186,7 @@ body {
 					}
 				}
 				.twitter-content {
+                    padding-left: 0;
 					a span:hover {
 						text-decoration: underline;
 					}
@@ -674,6 +675,36 @@ hr {
         text-decoration: underline;
     }
 }
+
+ul.twitter {
+    .twitter-profile-pic {
+        margin-right: 10px;
+        margin-top: 2px;
+        a img {
+            width: 48px;
+        }
+    }
+    .twitter-content {
+        padding-left: 58px;
+        p {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.widget.profile ul.twitter .twitter-profile-pic, .widget.profile ul.twitter time, .widget.profile ul.twitter span {
+    display: inline-block;
+}
+
+.widget.profile ul.twitter .twitter-profile-pic {
+    vertical-align: top;
+}
+
+.widget.profile ul.twitter .twitter-content {
+    padding-left: 0;
+    display: inline-block;
+}
+
 
 /* ===============================
    SOCIAL ICONS
