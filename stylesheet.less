@@ -1585,13 +1585,26 @@ span.ecom-product-category {
 }
 
 
-
 /* ===============================
    FOOTER
    =============================== */
 
 .bk-footer {
 	background-color: @color-swatch2;
+    float: left;
+    width: 100%;
+    padding-bottom: 2em;
+    .contain {
+        .widget.profile {
+            margin-bottom: 1em;
+            .bk-profile-socialicons {
+                margin: 0;
+            }
+            form fieldset button.btn {
+                margin: 0;
+            }
+        }
+    }
 }
 
 .footer-left {
