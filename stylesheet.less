@@ -209,14 +209,18 @@ body {
 			float: left;
 		}
 		.widget.clicktocall {
+            margin-top: 0;
             a {
     			cursor: text;
                 background-image: image('/images/icon-phone-grey.png');
                 background-size: 20px;
                 overflow: hidden;
                 background-repeat: no-repeat;
-                background-position: 2px 0;
+                background-position: 2px center;
                 padding-left: 20px;
+                @media only screen and (max-width: 650px) {
+                    background-position: 10px center;
+                }
     			@media @mobile {
     				cursor: pointer;
                     background-image: image('/images/icon-phone-white.png');
