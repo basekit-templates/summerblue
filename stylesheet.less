@@ -79,18 +79,15 @@ body {
 	background-color: @color-swatch2;
 	border-top: 15px solid @color-swatch7;
 	padding: 20px 0;
-	position: fixed;
+	position: absolute;
 	right: 0;
 	top: 0;
 	width: 100%;
-	z-index: 99999;
+	height: 100px;
 	@media only screen and (max-width: 568px) {
 		padding: 7px 0;
         min-height: 100px;
 	}
-    @media @tablet {
-        position: absolute;
-    }
 }
 
 .bk-header .contain {
@@ -110,9 +107,8 @@ body {
 		vertical-align: text-bottom;
 		img {
 			vertical-align: top;
-            max-height: 55px;
 		}
-        @media only screen and (max-width: 568px) {
+        @media @mobile {
             padding-top: 2px;
         }
 	}
@@ -140,12 +136,12 @@ body {
 
 .header-profile {
 	background-color: @color-swatch2;
-	padding-top: 70px;
 	padding-bottom: 40px;
 	width: 100%;
 	display: inline-block;
-    @media @mobile {
-        padding: 40px 0;
+    margin-top: -30px;
+    .company-logo {
+        margin-bottom: 60px;
     }
 	.header-prof-left {
 			display: inline-block;

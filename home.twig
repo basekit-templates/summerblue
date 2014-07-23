@@ -9,13 +9,13 @@
 	</nav>
 	<div role="main" id="main">
 		<header class="bk-header">
-			<div class="contain">
-				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
-				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-			</div><!--end contain-->
 		</header>
 		<div class="header-profile">
 			<div class="contain">
+				<div class="company-logo">
+					{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+					{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+				</div>
 				<div class="header-prof-left">
 					{{widget('profile', 'header-tweet', { 'profileType':'twitter', 'twitter':'profile', 'refreshtime':'1800000'})|raw}}
 					{{widget('profile', 'header-adress', { 'profileType':'address', 'address':'profile', 'refreshtime':'1800000'})|raw}}
@@ -25,6 +25,7 @@
 				</div>
 			</div><!--end contain-->
 		</div><!--end header-profile-->
+
 		<div class="feature-img" id="feature-img">
 			{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
 		</div>
