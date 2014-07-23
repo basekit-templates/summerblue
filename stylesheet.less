@@ -291,6 +291,9 @@ body {
 	display: table;
 	padding: 30px 15px;
 	width: 100%;
+    @media only screen and (max-width: 450px) {
+        padding: 17px 15px;
+    }
     ul {
         display: block;
         padding: 0;
@@ -315,6 +318,12 @@ body {
 	            text-transform: none;
 	            line-height: 1em;
         	}
+            a {
+                @media only screen and (max-width: 450px) {
+                    font-size: bkscale(@font-swatch6-font-size, 0.9);
+                    line-height: bkscale(@font-swatch6-line-height,0.9);
+                }
+            }
             &:hover { 
             	.transition( all, 0.5s, ease);
             	ul {
@@ -325,6 +334,10 @@ body {
             		}
             		.text {
             			font-size: bkscale(@font-swatch6-font-size, 0.95);
+                        @media only screen and (max-width: 450px) {
+                            font-size: bkscale(@font-swatch6-font-size, 0.9);
+                            line-height: bkscale(@font-swatch6-line-height,0.9);
+                        }
             		}
             	}
             }
@@ -348,8 +361,18 @@ body {
             			padding-top: 0px;
             		}
             	}
+                .text {
+                    @media only screen and (max-width: 450px) {
+                        font-size: bkscale(@font-swatch6-font-size, 0.9);
+                        line-height: bkscale(@font-swatch6-line-height,0.9);
+                    }
+                }
             	ul li a .text {
             		color: lighten(@color-swatch5, 32%);
+                    @media only screen and (max-width: 450px) {
+                        font-size: bkscale(@font-swatch6-font-size, 0.9);
+                        line-height: bkscale(@font-swatch6-line-height,0.9);
+                    }
             	}
 	        }
         }
@@ -371,6 +394,11 @@ body {
 	    @media @mobile {
 	    	right: 250px;
 	    }
+        @media only screen and (max-width: 450px) {
+            width: 48px;
+            height: 48px;
+            padding: 33px 30px;
+        }
 	    &:hover {
 	    	background-color: fade(@color-swatch7, 55%);
 	    	.transition( all, 0.5s, ease);
@@ -386,6 +414,10 @@ body {
 				top: 45px;
 				right: 40px;
 			}
+            @media only screen and (max-width: 450px) {
+                top: 29px;
+                right: 19px;
+            }
 		}
 	}
 	.bk-overlay {
