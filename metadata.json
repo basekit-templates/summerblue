@@ -63,7 +63,7 @@
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "28px",
             "font-weight": "400",
-            "line-height": "40px",
+            "line-height": "42px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -71,7 +71,7 @@
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "24px",
             "font-weight": "inherit",
-            "line-height": "36px",
+            "line-height": "38px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
