@@ -100,20 +100,16 @@ body {
 .widget {
 	&.logo, &.companyname {
 		display: inline-block;
+        vertical-align: middle;
 	}
 	&.logo {
 		margin-right: 2px;
         padding-top: 10px;
-		vertical-align: text-bottom;
-		img {
-			vertical-align: top;
-		}
         @media @mobile {
             padding-top: 2px;
         }
 	}
 	&.companyname {
-        vertical-align: top;
         max-width: 84%;
         @media only screen and (max-width: 568px) {
             max-width: 75%;
