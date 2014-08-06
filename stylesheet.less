@@ -453,7 +453,6 @@ body.menu-active .bk-nav {
 	right: 0; 
 }
 
-
 // Selected state
 
 .extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
@@ -654,14 +653,13 @@ a.basket-summary-empty-cta.btn,
     }
 } 
 
-a.basket-summary-empty-cta.btn {
+a.basket-summary-empty-cta.btn, a.btn.ecom-product-go-to-checkout-btn, .blog-post-more-link a, .blog-list-footer a {
     padding: 13px 18px !important;
 }
 
 .widget.profile form button.btn {
 	padding: 7px 15px 10px;
 }
-
 
 .tweet {
     margin: 5px 0;
@@ -1258,59 +1256,82 @@ footer.blog-post-metadata time {
 
 .widget.ecomproductslist {
     .productlist-filter {
-        margin-bottom: 1em;
-        @media @mobile {
-            margin: 0;
-        }
-        .productlist-display-form {
-            .form-group {
-                display: inline-block;
-                @media @mobile {
-                    width: 100%;
-                }
-                select {
-                    cursor: pointer;
-                    position: relative;
-                    margin-bottom: 12px;
-                    padding: 8px;
-                    border: 1px solid darken(@color-swatch2,7%);
-                    color: @color-swatch5;
-                    height: 35px;
-                    line-height: 34px;
-                    @media @mobile {
-                        width: 100%;
-                        height: 45px;
-                        border: 1px solid darken(@color-swatch2,8%);
-                    }
-                }
-                select[name="displayCount"] {
-                    margin-bottom: 0;
-                }
-                &.productlist-search {
-                    input {
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                        -webkit-border-radius: 0;
-                        height: 35px;
-                        border: 1px solid darken(@color-swatch2,7%);
-                        background-color: transparent;
-                        @media @mobile {
-                            width: 100%;
-                            margin-bottom: 20px;
-                            height: 45px;
-                            border: 1px solid darken(@color-swatch2,8%);
-                        }
-                    }
-                    .btn {
-                        padding: 3px 15px 6px;
-                        @media @mobile {
-                            padding: 8px 14px;
-                        }
-                    }
-                }
+            margin-bottom: 1em;
+            @media @tablet {
+              margin-left: 0;
+            }
+            @media @mobile {
+                margin: 0;
+            }
+            label {
+              display: block;
+              padding-left: 3px;
             }
         }
     }
+    select {
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 12px;
+        padding: 8px;
+        border: 1px solid darken(@color-swatch2,7%);
+        color: @color-swatch5;
+        background-color: @color-swatch1;
+        height: 35px;
+        line-height: 34px;
+        @media @tablet {
+          min-width: 50%;
+        }
+        @media @mobile {
+            width: 100%;
+            height: 45px;
+        }
+    }
+    select[name="displayCount"] {
+        margin-bottom: 0;
+    }
+    .productlist-search {
+      input {
+          height: 35px;
+          border: 1px solid darken(@color-swatch2,7%);
+          background-color: @color-swatch1;
+          font-family: @font-swatch5-font-family;
+          font-size: @font-swatch5-font-size;
+          color: @color-swatch5;
+          @media @tablet {
+            min-width: 50%;
+            margin-bottom: 20px;
+          }
+          @media @mobile {
+              width: 100%;
+              height: 45px;
+              border: 1px solid darken(@color-swatch2,8%);
+          }
+      }
+      .btn {
+            height: 35px;
+            padding: 1px 20px;
+            position: relative;
+            top:1px;
+            margin: 0;
+            border: none;
+            font-family: @font-swatch7-font-family;
+            font-size: 14px;
+            font-weight:@font-swatch7-font-weight;
+            background-color: @font-swatch7-background-color;
+            color: @font-swatch7-color;
+            text-decoration: none;
+            &:hover {
+              background-color: @font-swatch7-background-color-hover;
+              cursor: pointer;
+            }
+            @media @mobile {
+              padding: 8px 18px;
+              position: inherit;
+              top: 0;
+              height: auto;
+            }
+      }
     .ecom-productslist-product {
         margin-top: 2em;
         .ecom-productslist-image-wrap {
