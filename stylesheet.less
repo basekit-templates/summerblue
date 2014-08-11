@@ -424,11 +424,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-body.menu-active .widget.extendednavigation#slide-menu { 
+.menu-active .widget.extendednavigation#slide-menu { 
 	right: 0px; 
 }
 
-body.menu-active #main { 
+.menu-active #main { 
 	right: 320px; 
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
@@ -437,14 +437,17 @@ body.menu-active #main {
     }
 }
 
-body #main, body .bk-header {
+#main, .bk-header {
 	.transition( all, 0.5s, ease);
 	-webkit-backface-visibility: hidden;
 }
 
-body.menu-active .bk-nav { 
-	position: absolute;
-	right: 0; 
+.menu-active .bk-nav { 
+	display: table;
+    height: 100%;
+    position: absolute;
+    right: 0; 
+    .transition( all, 0.5s, ease);
 }
 
 // Selected state
