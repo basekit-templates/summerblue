@@ -553,7 +553,6 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 .contactform input,
 .widget.signupform form fieldset input,
-.widget.profile form fieldset input,
 .contactform textarea,
 .blogsearch input,
 select,
@@ -590,6 +589,22 @@ textarea {
 label {
     color: @color-swatch3;
 }
+
+.widget.profile form fieldset input {
+    background-color:  @color-swatch1;
+    border: 1px solid darken(@color-swatch2,2%);
+    text-indent: 0;
+    height: 42px;
+    vertical-align: middle;
+    @media @tablet {
+        width: 100%;
+    }
+    &:hover, &:focus {
+        border: 1px solid darken(@color-swatch2,8%);
+        outline: none;
+    }
+}
+
 
 .blogsearch {
     form {
