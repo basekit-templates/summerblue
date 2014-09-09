@@ -565,8 +565,9 @@ input[type=search] {
     text-indent: 0;
     height: 42px;
     vertical-align: middle;
-    @media @tablet {
+    @media @mobile {
     	width: 100%;
+        margin-bottom: 10px;
     }
     &:hover, &:focus {
     	border: 1px solid darken(@color-swatch2,8%);
@@ -583,6 +584,11 @@ textarea {
 
 .signupform fieldset label {
     margin-bottom: 0;
+}
+
+.signupform fieldset button {
+    position: relative;
+    top: -1px;
 }
 
 .signupform label,
