@@ -552,10 +552,15 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     margin: 0 0 10px;
 }
 
+form {
+    position: relative;
+}
+
 .contactform input,
 .widget.signupform form fieldset input,
 .contactform textarea,
 .blogsearch input,
+.productlist-search input,
 select,
 input[type=text],
 input[type=email],
@@ -569,6 +574,7 @@ input[type=search] {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     margin-bottom: 5px;
+    margin-right: 5px;
     @media @mobile {
     	width: 100%;
         margin-bottom: 10px;
@@ -577,6 +583,10 @@ input[type=search] {
     	border: 1px solid darken(@color-swatch2,8%);
     	outline: none;
     }
+}
+
+input#productlist-search {
+    margin-bottom: 0;
 }
 
 .contactform textarea,
@@ -588,11 +598,6 @@ textarea {
 
 .signupform fieldset label {
     margin-bottom: 0;
-}
-
-.signupform fieldset button {
-    position: relative;
-    top: -1px;
 }
 
 .signupform label,
@@ -616,13 +621,20 @@ label {
     }
 }
 
-
 .blogsearch {
     form {
         label {
         	display: block;
         }
     }
+}
+
+.productlist-filter .form-group {
+    position: relative;
+}
+
+.productlist-filter .form-group.productlist-search {
+    position: absolute;
 }
 
 .form-group {
@@ -667,14 +679,20 @@ a.basket-summary-empty-cta.btn,
     }
 }
 
-.signupform fieldset button {
-    padding: 6px 18px 9px;
-    margin-left: 5px;
-    @media @tablet {
-	    margin-left: 0;
-	    margin-top: 5px;
-    }
-} 
+.widget.profile form button.btn, 
+.signupform fieldset button, 
+.blogsearch form button.blog-search-submit-button {
+    position: absolute;
+    height: 42px;
+    padding: 0px 18px;
+    font-size: 14px;
+}
+
+.form-group.productlist-search .btn {
+    height: 42px;
+    padding: 0px 18px;
+    font-size: 14px;
+}
 
 @media @tablet {
 	.blogsearch form button,
@@ -884,10 +902,17 @@ ul.twitter {
 		}
 	}
 	.btn-play {
-		width: 44px;
-		height: 44px;
+		width: 60px;
+        height: 60px;
+        @media @mobile {
+            width: 40px;
+            height: 40px;
+        }
 		left: 50%;
 		margin-left: -22px;
+        &:after {
+            top: 3px;
+        }
 	}
 	.btn-prev,
 	.btn-next {
@@ -918,6 +943,12 @@ ul.twitter {
 	}
 	.content-wrapper {
 		background-color: fadeout(@font-swatch5-color, 50%);
+        .title {
+            &:after {
+                padding-left: 5px;
+                content: ":";
+            }
+        }
 	}
 }
 
