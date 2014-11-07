@@ -8,30 +8,28 @@
 	{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
 </nav>
 
-<div role="main" id="main">
-	<div class="main-area">
-		<header class="bk-header">
-		</header>
-		<div class="header-profile">
-			<div class="contain">
-				<div class="company-logo">
-					{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
-					{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-				</div>
-				<div class="header-prof-left">
-					{{widget('profile', 'header-tweet', { 'profileType':'twitter', 'twitter':'profile', 'refreshtime':'1800000'})|raw}}
-					{{widget('profile', 'header-adress', { 'profileType':'address', 'address':'profile', 'refreshtime':'1800000'})|raw}}
-				</div>
-				<div class="header-prof-right">
-					{{widget('clicktocall', 'header-clicktocall', {phoneText: '212 6574 6736'})|raw}}
-				</div>
-			</div><!--end contain-->
-		</div><!--end header-profile-->
-
-		<div class="contain" id="contain">
-				{{zone('main')|raw}}
+<div role="main" id="main" class="main-area">
+	<header class="bk-header">
+	</header>
+	<div class="header-profile">
+		<div class="contain">
+			<div class="company-logo">
+				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			</div>
+			<div class="header-prof-left">
+				{{widget('profile', 'header-tweet', { 'profileType':'twitter', 'twitter':'profile', 'refreshtime':'1800000'})|raw}}
+				{{widget('profile', 'header-adress', { 'profileType':'address', 'address':'profile', 'refreshtime':'1800000'})|raw}}
+			</div>
+			<div class="header-prof-right">
+				{{widget('clicktocall', 'header-clicktocall', {phoneText: '212 6574 6736'})|raw}}
+			</div>
 		</div><!--end contain-->
-	</div>
+	</div><!--end header-profile-->
+
+	<div class="contain" id="contain">
+			{{zone('main')|raw}}
+	</div><!--end contain-->
 
 	<footer class="bk-footer">
 		<div class="contain">
