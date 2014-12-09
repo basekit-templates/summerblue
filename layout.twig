@@ -34,7 +34,7 @@
 	{% block content %}
 	{% endblock %}
 	{% include basekit.bodyScript %}
-	
+
 	<script type="text/javascript">
 		! function () {
 		    function supportsSVG() {
@@ -48,9 +48,9 @@
 	<script>
 		$(function() {
 			// Toggles class open to display/hide the whole navigation
-			$( ".pull" ).click(function() {
-				$( "body" ).toggleClass( "menu-active" );
-			});
+            $(document).on("click", ".pull", function(e) {
+            	$( "body" ).toggleClass( "menu-active" );
+            });
 		});
 	</script>
 
