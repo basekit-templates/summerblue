@@ -477,7 +477,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 			padding: 20px;
 		}
 		h2 {
-			margin-bottom: 12px;
+			margin-bottom: 0;
             font-family:@font-swatch8-font-family;
             font-size:@font-swatch8-font-size;
             font-weight: @font-swatch8-font-weight;
@@ -491,6 +491,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
             font-weight: @font-swatch9-font-weight;
             line-height:@font-swatch9-line-height;
             color: @font-swatch9-color;
+            margin-bottom: .4em;
         }
         h2, h3 {
             @media @mobile {
@@ -517,11 +518,9 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
         }
 		.feature-btn button.btn {
 			padding: 8px 15px 13px;
-			span:after {
-				content: '\003E';
-				font-size: 1em;
-				padding-left: 10px;
-			}
+            margin: 0 0 1em;
+            font-size: @font-swatch9-font-size;
+            line-height: @font-swatch9-line-height;
 		}
 	}
 }
