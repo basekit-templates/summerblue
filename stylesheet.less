@@ -17,10 +17,10 @@
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-	-webkit-transition: @prop @time @ease;  
+	-webkit-transition: @prop @time @ease;
 	-moz-transition:    @prop @time @ease;
-	-ms-transition:     @prop @time @ease; 
-	-o-transition:      @prop @time @ease;  
+	-ms-transition:     @prop @time @ease;
+	-o-transition:      @prop @time @ease;
 }
 
 /* ===============================
@@ -310,7 +310,7 @@
                     line-height: bkscale(@font-swatch6-line-height,0.9);
                 }
             }
-            &:hover { 
+            &:hover {
             	.transition( all, 0.5s, ease);
                 .text {
                     color: @font-swatch6-color-hover;
@@ -372,7 +372,7 @@
 		padding: 45px 40px 30px;
 		position: absolute;
 		right: 318px;
-		top: 0; 
+		top: 0;
 		display: inline-block;
 		width: 100px;
 		height: 100px;
@@ -417,7 +417,7 @@
 div.widget .extendednavigation ul, div.widget.extendednavigation ul {
 	display: block;
 	li {
-		display: block; 
+		display: block;
 	}
 }
 
@@ -425,12 +425,12 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-.menu-active .widget.extendednavigation#slide-menu { 
-	right: 0px; 
+.menu-active .widget.extendednavigation#slide-menu {
+	right: 0px;
 }
 
-.menu-active #main { 
-	right: 320px; 
+.menu-active #main {
+	right: 320px;
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
     @media @mobile {
@@ -443,11 +443,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	-webkit-backface-visibility: hidden;
 }
 
-.menu-active .bk-nav { 
+.menu-active .bk-nav {
 	display: table;
     height: 100%;
     position: absolute;
-    right: 0; 
+    right: 0;
     .transition( all, 0.5s, ease);
 }
 
@@ -514,7 +514,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
             @media @mobile {
                 font-size: @font-swatch5-font-size;
                 line-height: @font-swatch5-line-height;
-            } 
+            }
         }
 		.feature-btn button.btn {
 			padding: 8px 15px 13px;
@@ -566,7 +566,8 @@ form {
 select,
 input[type=text],
 input[type=email],
-input[type=search] {
+input[type=search],
+.fonectacontactform textarea {
     background-color: @color-swatch2;
     border: 1px solid darken(@color-swatch2,2%);
     text-indent: 0;
@@ -643,19 +644,19 @@ label {
     BUTTONS
     =============================== */
 .widget.button button,
-button.btn, 
-.widget.profile form button, 
-.signupform fieldset button, 
-.contactform button.btn, 
-.btn, 
-.blogsearch form button, 
-.checkout-order-button, 
+button.btn,
+.widget.profile form button,
+.signupform fieldset button,
+.contactform button.btn,
+.btn,
+.blogsearch form button,
+.checkout-order-button,
 .checkout-empty-link,
 .tweet a,
 .widget.paypalbuynow .widget.button.paypal,
 .blog-post-more-link a,
 .blog-list-footer a,
-a.basket-summary-empty-cta.btn, 
+a.basket-summary-empty-cta.btn,
 .btn.basket-summary-submit,
 .ecombasket-remove-button,
 .widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
@@ -677,8 +678,8 @@ a.basket-summary-empty-cta.btn,
     }
 }
 
-.widget.profile form button.btn, 
-.signupform fieldset button, 
+.widget.profile form button.btn,
+.signupform fieldset button,
 .blogsearch form button.blog-search-submit-button {
     height: 42px;
     padding: 0px 18px;
@@ -721,7 +722,7 @@ a.basket-summary-empty-cta.btn, a.btn.ecom-product-go-to-checkout-btn, .blog-pos
     &:hover {
         text-decoration: none;
     }
-} 
+}
 
 .widget.paypalbuynow .widget.button.paypal {
     background-position: 20px;
@@ -736,7 +737,7 @@ a.basket-summary-empty-cta.btn, a.btn.ecom-product-go-to-checkout-btn, .blog-pos
     }
 }
 
-    
+
 /* PNG Icons */
 
 .widget.ecombasket .ecombasket-pull p:before,
@@ -1081,7 +1082,7 @@ ul.twitter {
                     &.menu-item-promoted { /* menu-item-promoted */
                         display: inline-block;
                         .inner-item {
-                            &:before { 
+                            &:before {
                                 content: "\2605";
                                 font-size: 20px;
                                 position: absolute;
@@ -1094,7 +1095,7 @@ ul.twitter {
                                 padding-left: 25px;
                                 color: @color-swatch3;
                             }
-                        }  
+                        }
                     }/* end menu-item-promoted */
                     .inner-item {
                         .menu-item-image-wrap {
@@ -1129,7 +1130,7 @@ ul.twitter {
                                 margin-bottom: 5px;
                                 padding: 0 3px;
                                 position: relative;
-                                &:before { 
+                                &:before {
                                     content: "\2605";
                                     font-size: 8px;
                                     position: absolute;
@@ -1149,7 +1150,7 @@ ul.twitter {
             .menu-subsection {
                 padding: 0;
                 margin: 0;
-                .menu-subsection-promoted { /* PROMOTED SUB-SECTION */ 
+                .menu-subsection-promoted { /* PROMOTED SUB-SECTION */
                     border: 1px solid darken(@color-swatch2,3%);
                     background-color: lighten(@color-swatch2,2%);
                     .border-radius(3px);
