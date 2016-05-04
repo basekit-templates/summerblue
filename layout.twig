@@ -31,6 +31,18 @@
 	{% block content %}
 	{% endblock %}
 	{% include basekit.bodyScript %}
+
+
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+    $(document).on('mq4hsChange', function (e) {
+        $(document.documentElement).toggleClass('no-touch', e.trueHover);
+    });
+</script>
+<script src="{{asset('js/mq4-hover-shim.js')}}"></script>
+
+
 <script type="text/javascript">
 	! function () {
 	    function supportsSVG() {
@@ -39,6 +51,7 @@
 	    if (supportsSVG()) document.documentElement.className += ' svg'
 	}()
 </script>
+
 
 <script>
   (function() {
