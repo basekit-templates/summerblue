@@ -1,7 +1,7 @@
 {
     "name":"SummerBlue",
     "thumbnail":"summerblue.png",
-    "screenshot":"summerblue.png",
+    "screenshot":"summerblue-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
