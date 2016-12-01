@@ -560,6 +560,10 @@ form {
 }
 
 .contactform input,
+.advancedcontactform form input[type=email], 
+.advancedcontactform form input[type=text],
+.advancedcontactform fieldset textarea,
+.advancedcontactform form select,
 .widget.signupform form fieldset input,
 .contactform textarea,
 .blogsearch input,
@@ -589,12 +593,17 @@ input[type=search],
     }
 }
 
+.advancedcontactform .option-list {
+    padding: 1em 0;
+}
+
 input#productlist-search {
     margin-bottom: 0;
 }
 
 .contactform textarea,
-textarea {
+textarea,
+.advancedcontactform fieldset textarea {
 	height: auto;
 	min-height: 150px;
 	resize: vertical;
@@ -606,7 +615,9 @@ textarea {
 
 .signupform label,
 .contactform label,
-label {
+label,
+.advancedcontactform .form-group>label,
+.advancedcontactform .option-list .option-item .label {
     color: @color-swatch3;
 }
 
@@ -649,6 +660,7 @@ button.btn,
 .widget.profile form button,
 .signupform fieldset button,
 .contactform button.btn,
+.advancedcontactform fieldset button,
 .btn,
 .blogsearch form button,
 .checkout-order-button,
