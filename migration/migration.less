@@ -1,39 +1,161 @@
-// Re-adds the container width to any widgets inside the main zone
-.empty-zone,
-#page-zones__main:empty,
-.canvas,
-#page-zones__main > .widget:not(.row),
-.row:not(.widget):not(.row--width-no-padding) .row__container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 960px;
-  width: 90%;
+#migrated-site {
+  #main > .contain {
+    padding: 0;
+    width: ~"calc(100% - 40px * 2)";
+    max-width: 100%;
+  }
+
+  // Re-adds the container width to any widgets inside the main zone
+  .empty-zone,
+  #page-zones__main:empty,
+  #page-zones__main > .widget:not(.row) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  #page-zones__main > .row,
+  .row-add-button {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
+  #page-zones__main > .widget:not(.row) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: ~"calc(1024px - 40px * 2)";
+  }
+
+  // Moves spacing to the first widget in the main zone
+  .edit #page-zones__main-overlay + .widget:not(.row),
+  #page-zones__main > .widget:not(.row):first-child {
+    margin-top: 40px;
+  }
+
+  // Moves spacing to the last widget in the main zone
+  #page-zones__main > .widget:not(.row):last-child {
+    margin-bottom: 40px
+  }
+
+  // Add spacing to the top of a widget when it procedes a section
+  #page-zones__main > .row + .widget:not(.row) {
+    margin-top: 15px;
+  }
+
+  // Adds spacing to the top and bottom of a section when a widget precedes it
+  #page-zones__main > .widget:not(.row) + .row {
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  .widget.ecomproductslist .productlist-filter {
+      margin-left: 0;
+  }
 }
 
+#migrated-site.edit {
+  .bk-nav {
+    @media only screen and (min-width: 930px) {
+      position: fixed;
+      right: 100px;
+      overflow-y: unset;
+      -webkit-overflow-scrolling: unset;
+      width: auto;
+      height: auto;
+      -webkit-transition: unset;
+      -moz-transition: unset;
+      -ms-transition: unset;
+      -o-transition: unset;
+    }
+  }
 
-// Moves spacing to the first widget in the main zone
-.edit #page-zones__main-overlay + .widget:not(.row),
-#page-zones__main > .widget:not(.row):first-child {
-  margin-top: 20px;
-}
+  .widget.extendednavigation {
+    @media only screen and (min-width: 930px) {
+      height: 100px;
+      width: 100px;
+    }
+  }
 
-// Moves spacing to the last widget in the main zone
-#page-zones__main > .widget:not(.row):last-child {
-  margin-bottom: 20px
-}
+  .widget.extendednavigation ul {
+    @media only screen and (min-width: 930px) {
+      display: none !important;
+    }
+  }
 
+  .widget.extendednavigation a.pull {
+    @media only screen and (min-width: 930px) {
+      right: 0;
+    }
+  }
 
-// Add spacing to the top of a widget when it procedes a section
-#page-zones__main > .row + .widget:not(.row) {
-  margin-top: 15px;
-}
+  #main {
+    /*overflow-x: hidden;*/
 
-// Adds spacing to the top and bottom of a section when a widget precedes it
-#page-zones__main > .widget:not(.row) + .row {
-  margin-bottom: 15px;
-  margin-top: 15px;
+    @media only screen and (min-width: 930px) {
+      position: unset;
+      overflow-y: unset;
+      -webkit-overflow-scrolling: unset;
+    }
+  }
 
-  &:not(:last-child) {
-    margin-bottom: 0;
+  .bk-header {
+    @media only screen and (min-width: 930px) {
+      left: 100px;
+      right: 100px;
+      width: auto;
+    }
+  }
+
+  .widget.gallery {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .widget.ecomproductslist,
+  .widget.ecomfeaturedproducts {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .widget.ecomproductslist .productlist-filter,
+  .widget.ecomfeaturedproducts .empty-info {
+    margin-left: 0;
+  }
+
+  &.row-add-mode .bk-nav,
+  &.row-add-mode .bk-header {
+    filter: grayscale(100%);
+    opacity: .4;
+    pointer-events: none;
+  }
+
+  &.row-editing #main {
+     overflow: hidden;
+     position: absolute;
+  }
+
+  &.is-move-mode .widget.extendednavigation a.pull,
+  &.row-editing .widget.extendednavigation a.pull {
+      display: none;
+  }
+
+  &.is-move-mode #page-zones__main >.widget:not([data-name="row"]):not(.row):before {
+    @media only screen and (max-width: 929px) {
+          display: block;
+    }
+  }
+
+  .top-level-overlay__arrangement-button--up,
+  .top-level-overlay__arrangement-button--down,
+  .top-level-overlay__delete-button {
+      background: transparent;
+      background-image: none;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+      width: 40px;
   }
 }
