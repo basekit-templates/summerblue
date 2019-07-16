@@ -4,6 +4,7 @@
     "screenshot":"summerblue-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
+    "versionTenCompatible": 1,
     "tags": {
     "en": ["clean", "menu", "ecommerce", "shop"],
     "es": ["limpio", "menú", "ecommerce", "tienda"],
