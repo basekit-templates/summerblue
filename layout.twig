@@ -1,16 +1,6 @@
 <!doctype html>
-<!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en">
-<![endif]-->
-<!--[if IE 7]>
-	<html class="no-js ie7 oldie" lang="en">
-<![endif]-->
-<!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-	<html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
+<html class="no-js" lang="{{ page.seoLang }}">
+
 <head>
 	<meta charset="utf-8" />
 	<title>{{ page.title }}</title>
@@ -26,12 +16,12 @@
 
 	{% include basekit.headScript %}
 </head>
+
 <body  {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }}">
 
 	{% block content %}
 	{% endblock %}
 	{% include basekit.bodyScript %}
-
 
 <!-- jQuery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -42,16 +32,14 @@
 </script>
 <script src="{{asset('js/mq4-hover-shim.js')}}"></script>
 
-
 <script type="text/javascript">
 	! function () {
 	    function supportsSVG() {
 	        return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
 	    }
 	    if (supportsSVG()) document.documentElement.className += ' svg'
-	}()
+	}();
 </script>
-
 
 <script>
   (function() {
@@ -65,7 +53,6 @@
     }
   }).call(this);
 </script>
-
 
 </body>
 </html>
